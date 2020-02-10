@@ -1,6 +1,41 @@
+$green-gradient: linear-gradient(#3CF166, #17DE24);
+$orange-gradient: linear-gradient(#F5E144, #FFA30F);
+$red-gradient: linear-gradient(#FA2020, #EF0049);
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == desktop-sm {
+        @media (max-width: 767px) { @content };
+    }
+    @if $breakpoint == desktop-md {
+        @media (max-width: 991px) { @content };
+    }
+    @if $breakpoint == desktop-lg {
+        @media (max-width: 1199px) { @content };
+    }
+    @if $breakpoint == desktop-xl {
+        @media (max-width: 1500px) { @content };
+    }
+    @if $breakpoint == desktop-xxl {
+        @media (max-width: 1800px) { @content };
+    }
+}
+
+@mixin respond-h($breakpoint) {
+    @if $breakpoint == height-sm {
+        @media (max-height: 600px) { @content };
+    }
+}
+
 html {
     font-size: 62.5%;
     //font-size: 68%;
+    @include respond(desktop-xl) {
+        font-size: 58%;
+    }
+
+    @include respond(desktop-md) {
+        font-size: 53%;
+    }
 
 }
 
@@ -195,18 +230,24 @@ body {
         }
 
         & .feedback-boss,
-        & .feedback-team {
+        & .feedback-team,
+        & .feedback-admin {
             max-height: 17.4vh;
         }
 
         & .feedback-from,
         & .feedback-to,
         & .feedback-boss,
-        & .feedback-team {
+        & .feedback-team,
+        & .feedback-admin {
             
             &-header {
                 padding: 2.7rem;
                 border-bottom: solid 1.5px #eaebee;
+
+                & a {
+                    white-space: nowrap;
+                }
                 
                 & h3 {
                     height: 2.1rem;
@@ -245,21 +286,39 @@ body {
             &-item {
                 display: grid;
                 height: 3.9rem;
-                padding-left: 2.7rem;
+                padding: 0 2.7rem;
                 border-bottom: solid 1.5px #eaebee;
                 font-size: 1.3rem;
                 line-height: 1.54;
                 color: #000a19;
+                white-space: nowrap;
 
-                & > * {
-                    width: 25%;
+                & a {
+                    width: 20%;
+                    @include respond(desktop-lg) {
+                        width: 20%;
+                    } 
+                }
+
+                & > *:not(:last-child) {
+                    width: 20%;
+                    @include respond(desktop-lg) {
+                        width: 20%;
+                    } 
+                    &:first-child {
+                        width: 40%;
+                        @include respond(desktop-lg) {
+                            width: 40%;
+                        } 
+                    }
                 }
             }
         }
 
         & .feedback-buttons {
-            
+            white-space: nowrap;
             a {
+                padding: 0 1rem;
                 display: inline-block;
                 width: 11.1rem;
                 height: 3.1rem;
@@ -268,6 +327,18 @@ body {
                 font-weight: 700;
                 line-height: 1.25;
                 color: #FFF;
+
+                @include respond(desktop-md) {
+                    width: 9rem;
+                }
+
+                & i {
+                    margin-right: .7rem;
+                    font-size: 1.7rem;
+                    @include respond(desktop-md) {
+                        margin-right: .3rem;
+                    }
+                }
                
             }
 

@@ -1,5 +1,11 @@
 html {
   font-size: 62.5%; }
+  @media (max-width: 1500px) {
+    html {
+      font-size: 58%; } }
+  @media (max-width: 991px) {
+    html {
+      font-size: 53%; } }
 
 body {
   width: 100vw;
@@ -131,12 +137,14 @@ body {
       height: 50%; }
     .results-body .feedback-from, .results-body .feedback-to {
       max-height: 34.9vh; }
-    .results-body .feedback-boss, .results-body .feedback-team {
+    .results-body .feedback-boss, .results-body .feedback-team, .results-body .feedback-admin {
       max-height: 17.4vh; }
-    .results-body .feedback-from-header, .results-body .feedback-to-header, .results-body .feedback-boss-header, .results-body .feedback-team-header {
+    .results-body .feedback-from-header, .results-body .feedback-to-header, .results-body .feedback-boss-header, .results-body .feedback-team-header, .results-body .feedback-admin-header {
       padding: 2.7rem;
       border-bottom: solid 1.5px #eaebee; }
-      .results-body .feedback-from-header h3, .results-body .feedback-to-header h3, .results-body .feedback-boss-header h3, .results-body .feedback-team-header h3 {
+      .results-body .feedback-from-header a, .results-body .feedback-to-header a, .results-body .feedback-boss-header a, .results-body .feedback-team-header a, .results-body .feedback-admin-header a {
+        white-space: nowrap; }
+      .results-body .feedback-from-header h3, .results-body .feedback-to-header h3, .results-body .feedback-boss-header h3, .results-body .feedback-team-header h3, .results-body .feedback-admin-header h3 {
         height: 2.1rem;
         font-size: 1.8rem;
         font-weight: bold;
@@ -145,11 +153,11 @@ body {
         line-height: 1.22;
         letter-spacing: 0.12px;
         color: #1a173b; }
-      .results-body .feedback-from-header a, .results-body .feedback-to-header a, .results-body .feedback-boss-header a, .results-body .feedback-team-header a {
+      .results-body .feedback-from-header a, .results-body .feedback-to-header a, .results-body .feedback-boss-header a, .results-body .feedback-team-header a, .results-body .feedback-admin-header a {
         height: 1.7rem;
         font-size: 1.4rem;
         line-height: 1.21; }
-    .results-body .feedback-from-body, .results-body .feedback-to-body, .results-body .feedback-boss-body, .results-body .feedback-team-body {
+    .results-body .feedback-from-body, .results-body .feedback-to-body, .results-body .feedback-boss-body, .results-body .feedback-team-body, .results-body .feedback-admin-body {
       height: 100%;
       height: -moz-calc(100%-100px);
       height: -webkit-calc(100%-100px);
@@ -158,31 +166,57 @@ body {
       /* Firefox */
       -ms-overflow-style: none;
       /* Internet Explorer 10+ */ }
-      .results-body .feedback-from-body::-webkit-scrollbar, .results-body .feedback-to-body::-webkit-scrollbar, .results-body .feedback-boss-body::-webkit-scrollbar, .results-body .feedback-team-body::-webkit-scrollbar {
+      .results-body .feedback-from-body::-webkit-scrollbar, .results-body .feedback-to-body::-webkit-scrollbar, .results-body .feedback-boss-body::-webkit-scrollbar, .results-body .feedback-team-body::-webkit-scrollbar, .results-body .feedback-admin-body::-webkit-scrollbar {
         /* WebKit */
         width: 0;
         height: 0; }
-    .results-body .feedback-from-item, .results-body .feedback-to-item, .results-body .feedback-boss-item, .results-body .feedback-team-item {
+    .results-body .feedback-from-item, .results-body .feedback-to-item, .results-body .feedback-boss-item, .results-body .feedback-team-item, .results-body .feedback-admin-item {
       display: grid;
       height: 3.9rem;
-      padding-left: 2.7rem;
+      padding: 0 2.7rem;
       border-bottom: solid 1.5px #eaebee;
       font-size: 1.3rem;
       line-height: 1.54;
-      color: #000a19; }
-      .results-body .feedback-from-item > *, .results-body .feedback-to-item > *, .results-body .feedback-boss-item > *, .results-body .feedback-team-item > * {
-        width: 25%; }
-    .results-body .feedback-buttons a {
-      display: inline-block;
-      width: 11.1rem;
-      height: 3.1rem;
-      border-radius: 4px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      line-height: 1.25;
-      color: #FFF; }
-    .results-body .feedback-buttons-settings {
-      background-color: #404040; }
-    .results-body .feedback-buttons-delete {
-      margin-left: 1.3rem;
-      background-color: #ff3e3e; }
+      color: #000a19;
+      white-space: nowrap; }
+      .results-body .feedback-from-item a, .results-body .feedback-to-item a, .results-body .feedback-boss-item a, .results-body .feedback-team-item a, .results-body .feedback-admin-item a {
+        width: 20%; }
+        @media (max-width: 1199px) {
+          .results-body .feedback-from-item a, .results-body .feedback-to-item a, .results-body .feedback-boss-item a, .results-body .feedback-team-item a, .results-body .feedback-admin-item a {
+            width: 20%; } }
+      .results-body .feedback-from-item > *:not(:last-child), .results-body .feedback-to-item > *:not(:last-child), .results-body .feedback-boss-item > *:not(:last-child), .results-body .feedback-team-item > *:not(:last-child), .results-body .feedback-admin-item > *:not(:last-child) {
+        width: 20%; }
+        @media (max-width: 1199px) {
+          .results-body .feedback-from-item > *:not(:last-child), .results-body .feedback-to-item > *:not(:last-child), .results-body .feedback-boss-item > *:not(:last-child), .results-body .feedback-team-item > *:not(:last-child), .results-body .feedback-admin-item > *:not(:last-child) {
+            width: 20%; } }
+        .results-body .feedback-from-item > *:not(:last-child):first-child, .results-body .feedback-to-item > *:not(:last-child):first-child, .results-body .feedback-boss-item > *:not(:last-child):first-child, .results-body .feedback-team-item > *:not(:last-child):first-child, .results-body .feedback-admin-item > *:not(:last-child):first-child {
+          width: 40%; }
+          @media (max-width: 1199px) {
+            .results-body .feedback-from-item > *:not(:last-child):first-child, .results-body .feedback-to-item > *:not(:last-child):first-child, .results-body .feedback-boss-item > *:not(:last-child):first-child, .results-body .feedback-team-item > *:not(:last-child):first-child, .results-body .feedback-admin-item > *:not(:last-child):first-child {
+              width: 40%; } }
+    .results-body .feedback-buttons {
+      white-space: nowrap; }
+      .results-body .feedback-buttons a {
+        padding: 0 1rem;
+        display: inline-block;
+        width: 11.1rem;
+        height: 3.1rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #FFF; }
+        @media (max-width: 991px) {
+          .results-body .feedback-buttons a {
+            width: 9rem; } }
+        .results-body .feedback-buttons a i {
+          margin-right: .7rem;
+          font-size: 1.7rem; }
+          @media (max-width: 991px) {
+            .results-body .feedback-buttons a i {
+              margin-right: .3rem; } }
+      .results-body .feedback-buttons-settings {
+        background-color: #404040; }
+      .results-body .feedback-buttons-delete {
+        margin-left: 1.3rem;
+        background-color: #ff3e3e; }
