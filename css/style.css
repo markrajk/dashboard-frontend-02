@@ -128,24 +128,40 @@ body {
       border-radius: 1.7rem; }
   .results-body {
     font-family: 'Lato', sans-serif;
-    height: calc(98% - 15.9rem); }
+    height: calc(98% - 15.9rem);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */ }
+    .results-body::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0; }
     .results-body .row {
-      height: 25%; }
+      height: 25%;
+      min-height: 15.5rem; }
       .results-body .row .col-6 {
         height: 100% important; }
     .results-body .row:nth-of-type(1) {
-      height: 50%; }
+      height: 50%;
+      min-height: 27rem; }
     .results-body .feedback-from, .results-body .feedback-to {
-      max-height: 34.9vh; }
+      max-height: 33.2vh;
+      min-height: 27.5rem; }
     .results-body .feedback-boss, .results-body .feedback-team, .results-body .feedback-admin {
-      max-height: 17.4vh; }
+      max-height: 15.8rem; }
     .results-body .feedback-from-header, .results-body .feedback-to-header, .results-body .feedback-boss-header, .results-body .feedback-team-header, .results-body .feedback-admin-header {
       padding: 2.7rem;
       border-bottom: solid 1.5px #eaebee; }
       .results-body .feedback-from-header a, .results-body .feedback-to-header a, .results-body .feedback-boss-header a, .results-body .feedback-team-header a, .results-body .feedback-admin-header a {
+        height: 2.1rem;
+        line-height: 1.22;
+        margin-left: 1rem;
         white-space: nowrap; }
       .results-body .feedback-from-header h3, .results-body .feedback-to-header h3, .results-body .feedback-boss-header h3, .results-body .feedback-team-header h3, .results-body .feedback-admin-header h3 {
         height: 2.1rem;
+        margin-bottom: 0;
         font-size: 1.8rem;
         font-weight: bold;
         font-stretch: normal;
@@ -174,11 +190,12 @@ body {
       display: grid;
       height: 3.9rem;
       padding: 0 2.7rem;
-      border-bottom: solid 1.5px #eaebee;
       font-size: 1.3rem;
       line-height: 1.54;
       color: #000a19;
       white-space: nowrap; }
+      .results-body .feedback-from-item:not(:last-child), .results-body .feedback-to-item:not(:last-child), .results-body .feedback-boss-item:not(:last-child), .results-body .feedback-team-item:not(:last-child), .results-body .feedback-admin-item:not(:last-child) {
+        border-bottom: solid 1.5px #eaebee; }
       .results-body .feedback-from-item a, .results-body .feedback-to-item a, .results-body .feedback-boss-item a, .results-body .feedback-team-item a, .results-body .feedback-admin-item a {
         width: 20%; }
         @media (max-width: 1199px) {
