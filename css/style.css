@@ -146,16 +146,11 @@ body {
     overflow-y: auto;
     overflow-x: hidden; }
     .results-body .row:nth-of-type(1) {
-      max-height: 33.2vh;
-      height: 100%;
       min-height: 23rem; }
       .results-body .row:nth-of-type(1) .col-6 {
-        max-height: 33.2vh;
         height: 100%;
         min-height: 23rem; }
     .results-body .feedback-from, .results-body .feedback-to {
-      max-height: 33.2vh;
-      height: 100%;
       min-height: 23rem; }
     .results-body .feedback-boss, .results-body .feedback-team, .results-body .feedback-admin {
       max-height: 15.7rem; }
@@ -182,9 +177,6 @@ body {
         font-size: 1.4rem;
         line-height: 1.21; }
     .results-body .feedback-from-body, .results-body .feedback-to-body, .results-body .feedback-boss-body, .results-body .feedback-team-body, .results-body .feedback-admin-body {
-      height: 100%;
-      height: -moz-calc(100%-100px);
-      height: -webkit-calc(100%-100px);
       overflow-y: auto; }
     .results-body .feedback-from-item, .results-body .feedback-to-item, .results-body .feedback-boss-item, .results-body .feedback-team-item, .results-body .feedback-admin-item {
       display: grid;
