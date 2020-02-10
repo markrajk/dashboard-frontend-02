@@ -189,10 +189,24 @@ body {
             height: 50%;
         }
 
-        & .feedback-from {
-            max-height: calc(33.2rem);
+        & .feedback-from,
+        & .feedback-to {
+            max-height: 34.9vh;
+        }
+
+        & .feedback-boss,
+        & .feedback-team {
+            max-height: 17.4vh;
+        }
+
+        & .feedback-from,
+        & .feedback-to,
+        & .feedback-boss,
+        & .feedback-team {
+            
             &-header {
                 padding: 2.7rem;
+                border-bottom: solid 1.5px #eaebee;
                 
                 & h3 {
                     height: 2.1rem;
@@ -231,11 +245,39 @@ body {
             &-item {
                 display: grid;
                 height: 3.9rem;
-                border: solid 1.5px #eaebee;
+                padding-left: 2.7rem;
+                border-bottom: solid 1.5px #eaebee;
+                font-size: 1.3rem;
+                line-height: 1.54;
+                color: #000a19;
 
                 & > * {
                     width: 25%;
                 }
+            }
+        }
+
+        & .feedback-buttons {
+            
+            a {
+                display: inline-block;
+                width: 11.1rem;
+                height: 3.1rem;
+                border-radius: 4px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.25;
+                color: #FFF;
+               
+            }
+
+            &-settings {
+                background-color: #404040;
+            }
+
+            &-delete {
+                margin-left: 1.3rem;
+                background-color: #ff3e3e;
             }
         }
 
