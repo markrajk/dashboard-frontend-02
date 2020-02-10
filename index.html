@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boilerplate</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Nunito+Sans:300,400|Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- MAIN WRAPPER -->
+    <main class="main d-flex">
+
+        <!-- SIDEBAR SECTION-->
+        <div class="sidebar d-flex flex-column bg-white">
+            <div class="sidebar-info d-flex align-items-center">
+                <img class="sidebar-info-img" src="img/profile-pic.png" alt="profile picture">
+                <div class="d-inline-block d-flex flex-column">
+                    <p class="sidebar-info-name m-0">Andrew<span class="align-middle"></span></p>
+                    <p class="sidebar-info-title m-0">Boss</p>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <h3>GIVE FEEDBACK</h3>
+                <select name="sidebar-select" id="sidebar-select">
+                    <option value="one">To you people</option>
+                </select>
+            </div>
+
+            <div class="sidebar-group">
+                <h3>TEAMS</h3>
+                <ul class="list-unstyled">
+                    <li>Results</li>
+                    <li>Export results</li>
+                    <li>Manage teams</li>
+                    <li>Create a new team</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-group">
+                <h3>PEOPLE</h3>
+                <ul class="list-unstyled">
+                    <li>Results</li>
+                    <li>Export results</li>
+                    <li>Manage people</li>
+                    <li>Invite new people</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-group">
+                <h3>ME</h3>
+                <ul class="list-unstyled">
+                    <li>Results</li>
+                    <li>My account</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- RESULTS SECTION -->
+        <div class="results">
+            <div class="results-header">
+                <div class="results-header-logout d-flex justify-content-between">
+                    <p class="mb-0">Settings</p>
+                    <p class="text-right align-middle">Logout <i class="material-icons align-middle">exit_to_app</i></p>
+                </div>
+                <h2 class="mt-1 align-middle">Manage people's settings</h2>
+                <!-- <p class="choose"><span>My key people </span><span class="px-1">|</span> All people</p> -->
+                <div class="results-header-search">
+                    <div class="input-group h-100">
+                        <!-- <div class="input-group-prepend">
+                          <span class="input-group-text">Person</span>
+                        </div> -->
+                        <input class="m-auto" type="text" placeholder="Search...">
+                      </div>
+                </div>
+            </div>
+            <div class="results-body d-flex flex-column justify-content-between">
+               <div class="row">
+                   <div class="col-6">
+                       <div class="feedback-from card card-body h-100 bg- white p-0">
+                            <div class="feedback-from-header d-flex justify-content-between">
+                                <h3>People who give feedback to peter</h3>
+                                <a href="#">Add new</a>
+                            </div>
+                            <div class="feedback-from-body d-glex flex-column">
+                                <div class="feedback-from-item d-flex align-items-middle">
+                                    <div class="d-inline-block">1</div>
+                                    <div class="d-inline-block">1</div>
+                                    <div class="d-inline-block">1</div>
+                                    <div class="d-inline-block">1</div>
+                                </div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                                <div class="feedback-from-item"></div>
+                            </div>
+                       </div>
+                   </div>
+                   <div class="col-6"></div>
+               </div>
+               <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
