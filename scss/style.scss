@@ -113,7 +113,7 @@ body {
     //height: 100%;
     width: 100%;
     background-color: #F8F9FB;
-    padding: 4.1rem 4.6rem 2.8rem 4.7rem;
+    padding: 4.1rem 4.6rem 2.8rem 3.4rem;
 
     &-header {
         &-logout {
@@ -230,8 +230,8 @@ body {
 
             &-item {
                 display: grid;
-                height: 50px;
-                border: 1px solid black;
+                height: 3.9rem;
+                border: solid 1.5px #eaebee;
 
                 & > * {
                     width: 25%;
