@@ -95,7 +95,6 @@ body {
 
 .results {
   width: 100%;
-  margin-left: 24.4rem;
   background-color: #F8F9FB;
   padding: 4.1rem 4.6rem 2.8rem 3.4rem; }
   .results-header-logout {
@@ -170,32 +169,36 @@ body {
     .results-body .feedback-boss, .results-body .feedback-team, .results-body .feedback-admin {
       max-height: 15.7rem; }
     .results-body .feedback-from-header, .results-body .feedback-to-header, .results-body .feedback-boss-header, .results-body .feedback-team-header, .results-body .feedback-admin-header {
-      padding: 2.16rem;
+      padding: 2.7rem;
       border-bottom: solid 1.5px #eaebee; }
       .results-body .feedback-from-header a, .results-body .feedback-to-header a, .results-body .feedback-boss-header a, .results-body .feedback-team-header a, .results-body .feedback-admin-header a {
-        height: 1.68rem;
-        margin-left: 0.8rem;
+        height: 2.1rem;
+        line-height: 1.22;
+        margin-left: 1rem;
         white-space: nowrap; }
       .results-body .feedback-from-header h3, .results-body .feedback-to-header h3, .results-body .feedback-boss-header h3, .results-body .feedback-team-header h3, .results-body .feedback-admin-header h3 {
-        height: 1.68rem;
+        height: 2.1rem;
         margin-bottom: 0;
-        font-size: 1.44rem;
+        font-size: 1.8rem;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
+        line-height: 1.22;
         letter-spacing: 0.12px;
         color: #1a173b; }
       .results-body .feedback-from-header a, .results-body .feedback-to-header a, .results-body .feedback-boss-header a, .results-body .feedback-team-header a, .results-body .feedback-admin-header a {
-        height: 1.36rem;
-        font-size: 1.12rem; }
+        height: 1.7rem;
+        font-size: 1.4rem;
+        line-height: 1.21; }
     .results-body .feedback-from-body, .results-body .feedback-to-body, .results-body .feedback-boss-body, .results-body .feedback-team-body, .results-body .feedback-admin-body {
       height: 100%;
       overflow-y: auto; }
     .results-body .feedback-from-item, .results-body .feedback-to-item, .results-body .feedback-boss-item, .results-body .feedback-team-item, .results-body .feedback-admin-item {
       display: grid;
-      height: 3.12rem;
-      padding: 0 2.16rem;
-      font-size: 1.04rem;
+      height: 3.9rem;
+      padding: 0 2.7rem;
+      font-size: 1.3rem;
+      line-height: 1.54;
       color: #000a19;
       white-space: nowrap; }
       .results-body .feedback-from-item:not(:last-child), .results-body .feedback-to-item:not(:last-child), .results-body .feedback-boss-item:not(:last-child), .results-body .feedback-team-item:not(:last-child), .results-body .feedback-admin-item:not(:last-child) {
@@ -221,24 +224,26 @@ body {
       .results-body .feedback-buttons a {
         padding: 0 1rem;
         display: inline-block;
-        width: 8.88rem;
-        height: 2.48rem;
+        width: 11.1rem;
+        height: 3.1rem;
         border-radius: 4px;
-        font-size: 0.96rem;
+        font-size: 1.2rem;
         font-weight: 700;
         line-height: 1.25;
         color: #FFF; }
         @media (max-width: 991px) {
           .results-body .feedback-buttons a {
-            width: 7.2rem; } }
+            width: 9rem; } }
         .results-body .feedback-buttons a i {
-          margin-right: 0.4rem;
-          font-size: 1.36remrem; }
+          margin-right: .5rem;
+          font-size: 1.7rem; }
           @media (max-width: 991px) {
             .results-body .feedback-buttons a i {
               margin-right: .3rem; } }
       .results-body .feedback-buttons-settings {
         background-color: #404040; }
       .results-body .feedback-buttons-delete {
-        margin-left: 1.04rem;
+        margin-left: 1.3rem;
         background-color: #ff3e3e; }
+
+/*# sourceMappingURL=style.css.map */

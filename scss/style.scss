@@ -26,6 +26,12 @@ $red-gradient: linear-gradient(#FA2020, #EF0049);
     }
 }
 
+
+@function resize($base) {
+  $result: $base * .8;
+  @return $result;
+}
+
 html {
     font-size: 62.5%;
     //font-size: 68%;
@@ -37,6 +43,9 @@ html {
         font-size: 53%;
     }
 
+    @include respond(desktop-md) {
+    font-size: 48%;
+  }
 }
 
 body {
@@ -53,113 +62,115 @@ body {
 }
 
 .sidebar {
-    height: 100%; 
-    min-width: 24.4rem; 
+    position: fixed;
+    height: 100vh;
+    min-width: 24.4rem;
+    top:0;
+    left: 0;
     padding: 4.2rem 3rem;
-    box-shadow:  0 2px 9px  rgba(0,0,0,.06);
+    padding-bottom: 0;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.06);
     z-index: 1000;
-    
-
+  
     &-body {
-        height: 100%;
-        overflow-y: scroll;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-
-        &::-webkit-scrollbar { /* WebKit */
-            width: 0;
-            height: 0;
-        }
+      height: 100%;
+      overflow-y: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+  
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
     }
-
+  
     &-info {
-
-        &-img {
-            width: 6.7rem;
-            height: 6.7rem;
-            border-radius: 50%;
+      &-img {
+        width: 6.7rem;
+        height: 6.7rem;
+        border-radius: 50%;
+      }
+  
+      &-name {
+        padding-left: 1.3rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: #002257;
+  
+        & span {
+          display: inline-block;
+          width: 0.7rem;
+          height: 0.7rem;
+          margin-left: 0.7rem;
+          background-color: #2ebd41;
+          border-radius: 50%;
         }
-
-        &-name {
-            padding-left: 1.3rem;
-            font-size: 1.7rem;
-            font-weight: 600;
-            color: #002257;
-
-            & span {
-                display: inline-block;
-                width: .7rem;
-                height: .7rem;
-                margin-left: .7rem;
-                background-color: #2EBD41;
-                border-radius: 50%;
-            }
-        }
-
-        &-title {
-            padding-left: 1.3rem;
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: #969EAD;
-        }
+      }
+  
+      &-title {
+        padding-left: 1.3rem;
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: #969ead;
+      }
     }
-
+  
     &-group {
-        padding-top: 4rem;
-
-        &:nth-of-type(2),
-        &:nth-of-type(3) {
-            padding-top: 3.5rem;
-        }
-
-        & .list-unstyled {
-            margin: 0;
-        }
-
-        h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 700;
-            line-height: 1.42;
-            color:#687181;
-        }
-
-        & select {
-            height: 3.5rem;
-            width: 100%;
-            margin-top: .7rem;
-            padding: 0 .7rem;
-            font-size: 1.2rem;
-            border-color: #EAEBEE;
+      padding-top: 4rem;
+  
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        padding-top: 3.5rem;
+      }
+  
+      & .list-unstyled {
+        margin: 0;
+      }
+  
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.42;
+        color: #687181;
+      }
+  
+      & select {
+        height: 3.5rem;
+        width: 100%;
+        margin-top: 0.7rem;
+        padding: 0 0.7rem;
+        font-size: 1.2rem;
+        border-color: #eaebee;
+        color: #002257;
+        border-radius: 3px;
+      }
+  
+      & .list-unstyled {
+        & li {
+          & a {
+            display: inline-block;
+            height: 1.8rem;
+            margin-top: 1.7rem;
+            text-decoration: none;
+            font-size: 1.3rem;
+            line-height: 1.69;
             color: #002257;
-            border-radius: 3px;
+          }
+  
+          &.active {
+            font-weight: 700;
+          }
         }
-
-        & .list-unstyled {
-
-
-            & li {
-                & a {
-                    display: inline-block;
-                    height: 1.8rem;
-                    margin-top: 1.7rem;
-                    text-decoration: none;
-                    font-size: 1.3rem;
-                    line-height: 1.69;
-                    color: #002257;
-                }
-
-                &.active {
-                    font-weight: 700;
-                }
-            }
-        }
+      }
     }
-}
+  }
 
 .results {
     //height: 100%;
     width: 100%;
+     margin-left: 24.4rem;
     background-color: #F8F9FB;
     padding: 4.1rem 4.6rem 2.8rem 3.4rem;
 
@@ -247,13 +258,6 @@ body {
         //     height: 0;
         // }
 
-        & .row {
-            // height: 25%;
-            // min-height: 15.5rem;
-           
-
-            
-        }
 
         & .row:nth-of-type(1) {
             // height: 50%;
@@ -273,7 +277,7 @@ body {
 
         & .feedback-from,
         & .feedback-to {
-            max-height: 33.2vh;
+            max-height: auto;
             height: 100%;
             min-height: 23rem;
 
@@ -292,32 +296,29 @@ body {
         & .feedback-admin {
             
             &-header {
-                padding: 2.7rem;
+                padding: resize(2.7) * 1rem;
                 border-bottom: solid 1.5px #eaebee;
 
                 & a {
-                    height: 2.1rem;
-                    line-height: 1.22;
-                    margin-left: 1rem;
+                    height: resize(2.1) * 1rem;
+                    margin-left: resize(1) * 1rem;
                     white-space: nowrap;
                 }
                 
                 & h3 {
-                    height: 2.1rem;
+                    height: resize(2.1) * 1rem;
                     margin-bottom: 0;
-                    font-size: 1.8rem;
+                    font-size: resize(1.8) * 1rem;
                     font-weight: bold;
                     font-stretch: normal;
                     font-style: normal;
-                    line-height: 1.22;
                     letter-spacing: 0.12px;
                     color: #1a173b;
                 }
 
                 & a {
-                    height: 1.7rem;
-                    font-size: 1.4rem;
-                    line-height: 1.21;
+                    height: resize(1.7) * 1rem;
+                    font-size: resize(1.4) * 1rem;
                     // color: #0077ff;
                 }
             }
@@ -325,8 +326,6 @@ body {
             &-body {
                 //height: 100%;
                 height:100%;
-                height:-moz-calc(100%-100px);
-                height:-webkit-calc(100%-100px);
                 overflow-y: auto;
                 // scrollbar-width: none; /* Firefox */
                 // -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -339,11 +338,9 @@ body {
 
             &-item {
                 display: grid;
-                height: 3.9rem;
-                padding: 0 2.7rem;
-                
-                font-size: 1.3rem;
-                line-height: 1.54;
+                height: resize(3.9) * 1rem;
+                padding: 0 resize(2.7) * 1rem;
+                font-size: resize(1.3) * 1rem;
                 color: #000a19;
                 white-space: nowrap;
 
@@ -377,32 +374,32 @@ body {
             }
         }
 
-        & .feedback-team {
-            &-item {
+        // & .feedback-team {
+        //     &-item {
                 
-            }
-        }
+        //     }
+        // }
 
         & .feedback-buttons {
             white-space: nowrap;
             a {
                 padding: 0 1rem;
                 display: inline-block;
-                width: 11.1rem;
-                height: 3.1rem;
+                width: resize(11.1) * 1rem;
+                height: resize(3.1) * 1rem;
                 border-radius: 4px;
-                font-size: 1.2rem;
+                font-size: resize(1.2) * 1rem;
                 font-weight: 700;
                 line-height: 1.25;
                 color: #FFF;
 
                 @include respond(desktop-md) {
-                    width: 9rem;
+                    width: resize(9) * 1rem;
                 }
 
                 & i {
-                    margin-right: .5rem;
-                    font-size: 1.7rem;
+                    margin-right: resize(.5) * 1rem;
+                    font-size: resize(1.7) * 1remrem;
                     @include respond(desktop-md) {
                         margin-right: .3rem;
                     }
@@ -415,7 +412,7 @@ body {
             }
 
             &-delete {
-                margin-left: 1.3rem;
+                margin-left: resize(1.3) * 1rem;
                 background-color: #ff3e3e;
             }
         }
