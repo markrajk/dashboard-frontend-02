@@ -28,7 +28,7 @@ $red-gradient: linear-gradient(#FA2020, #EF0049);
 
 
 @function resize($base) {
-  $result: $base * .8;
+  $result: $base * .9;
   @return $result;
 }
 
@@ -296,30 +296,49 @@ body {
         & .feedback-admin {
             
             &-header {
-                padding: resize(2.7) * 1rem;
+                padding: 2.7rem;
                 border-bottom: solid 1.5px #eaebee;
 
+                @include respond(desktop-xl) {
+                    padding: resize(2.7) * 1rem;
+                }
+
                 & a {
-                    height: resize(2.1) * 1rem;
-                    margin-left: resize(1) * 1rem;
+                    height: 2.1rem;
+                    margin-left:1rem;
                     white-space: nowrap;
+
+                    @include respond(desktop-xl) {
+                        height: resize(2.1) * 1rem;
+                        margin-left: resize(1) * 1rem;
+                    }
                 }
                 
                 & h3 {
-                    height: resize(2.1) * 1rem;
+                    height: 2.1rem;
                     margin-bottom: 0;
-                    font-size: resize(1.8) * 1rem;
+                    font-size: 1.8rem;
                     font-weight: bold;
                     font-stretch: normal;
                     font-style: normal;
                     letter-spacing: 0.12px;
                     color: #1a173b;
+
+                    @include respond(desktop-xl) {
+                        height: resize(2.1) * 1rem;
+                        font-size: resize(1.8) * 1rem;
+                    }
                 }
 
                 & a {
-                    height: resize(1.7) * 1rem;
-                    font-size: resize(1.4) * 1rem;
+                    height: 1.7rem;
+                    font-size: 1.4rem;
                     // color: #0077ff;
+
+                    @include respond(desktop-xl) {
+                        height: resize(1.7) * 1rem;
+                        font-size: resize(1.4) * 1rem;
+                    }
                 }
             }
 
@@ -338,11 +357,17 @@ body {
 
             &-item {
                 display: grid;
-                height: resize(3.9) * 1rem;
-                padding: 0 resize(2.7) * 1rem;
-                font-size: resize(1.3) * 1rem;
+                height: 3.9rem;
+                padding: 0 2.7rem;
+                font-size: 1.3rem;
                 color: #000a19;
                 white-space: nowrap;
+
+                @include respond(desktop-xl) {
+                    height: resize(3.9) * 1rem;
+                    padding: 0 resize(2.7) * 1rem;
+                    font-size: resize(1.3) * 1rem;
+                }
 
                 &:not(:last-child) {
                     border-bottom: solid 1.5px #eaebee;
@@ -385,21 +410,33 @@ body {
             a {
                 padding: 0 1rem;
                 display: inline-block;
-                width: resize(11.1) * 1rem;
-                height: resize(3.1) * 1rem;
+                width: 11.1rem;
+                height: 3.1rem;
                 border-radius: 4px;
-                font-size: resize(1.2) * 1rem;
+                font-size: 1.2rem;
                 font-weight: 700;
                 line-height: 1.25;
                 color: #FFF;
+
+                @include respond(desktop-xl) {
+                    width: resize(11.1) * 1rem;
+                    height: resize(3.1) * 1rem;
+                    font-size: resize(1.2) * 1rem;
+                }
 
                 @include respond(desktop-md) {
                     width: resize(9) * 1rem;
                 }
 
                 & i {
-                    margin-right: resize(.5) * 1rem;
-                    font-size: resize(1.7) * 1remrem;
+                    margin-right: .5rem;
+                    font-size: 1.7rem;
+
+                    @include respond(desktop-xl) {
+                        margin-right: resize(.5) * 1rem;
+                        font-size: resize(1.7) * 1rem;
+                    }
+
                     @include respond(desktop-md) {
                         margin-right: .3rem;
                     }
